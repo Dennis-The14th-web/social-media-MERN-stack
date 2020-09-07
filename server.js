@@ -11,7 +11,7 @@ mongoose.connect("mongodb://192.168.99.100/justKonnect",{
 
 })
 mongoose.connection.on('connected',()=>{
-    console.log("conneted to mongo yeahh")
+    console.log("conneted to db")
 })
 mongoose.connection.on('error',(err)=>{
     console.log("err connecting",err)

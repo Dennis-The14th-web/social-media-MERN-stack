@@ -21,15 +21,14 @@ const Profile  = ()=>{
         const data = new FormData()
         data.append("file",image)
         data.append("upload_preset","insta-clone")
-        data.append("cloud_name","cnq")
-        fetch("https://api.cloudinary.com/v1_1/cnq/image/upload",{
+        data.append("cloud_name","dedenco")
+        fetch("https://api.cloudinary.com/v1_1/dedenco/image/upload",{
             method:"post",
             body:data
         })
         .then(res=>res.json())
         .then(data=>{
-    
-       
+            // console.log(data)
            fetch('/updatepic',{
                method:"put",
                headers:{

@@ -4,8 +4,8 @@
   "description": "social media app",
   "main": "server.js",
   "scripts": {
-    "start":"node server.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "dennis itua",
   "license": "ISC",
@@ -13,6 +13,8 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.3"
+    "mongoose": "^5.10.3",
+    "nodemailer": "^6.4.11",
+    "nodemailer-sendgrid-transport": "^0.2.0"
   }
 }

@@ -1,6 +1,6 @@
 import React,{useContext,useRef,useEffect,useState} from 'react'
 import {Link ,useHistory} from 'react-router-dom'
-import {UserContext} from '../App'
+import {UserContext} from '../../App'
 import M from 'materialize-css'
 const NavBar = ()=>{
     const  searchModal = useRef(null)

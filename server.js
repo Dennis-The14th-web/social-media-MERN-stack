@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 const mongoose  = require('mongoose')
 const PORT = process.env.PORT || 5000
-// const {MONGOURI} = require('./config/keys')
+const {MONGOURI} = require('./config/keys')
 
 
-mongoose.connect("mongodb://192.168.99.100/justKonnect",{
+mongoose.connect( MONGOURI || "mongodb://192.168.99.100/justKonnect",{
     useNewUrlParser:true,
     useUnifiedTopology: true
 

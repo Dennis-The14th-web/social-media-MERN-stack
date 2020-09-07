@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import M from 'materialize-css'
 import {useHistory} from 'react-router-dom'
-const CretePost = ()=>{
+const CreatePost = ()=>{
     const history = useHistory()
     const [title,setTitle] = useState("")
     const [body,setBody] = useState("")
@@ -99,4 +99,4 @@ const CretePost = ()=>{
 }
 
 
-export default CretePost
+export default CreatePost

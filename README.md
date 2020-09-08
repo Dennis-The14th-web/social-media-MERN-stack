@@ -27,11 +27,11 @@
 
 - react-router-dom / bcryptjs / jsonwebtoken / nodemailer / nodemailer-sendgrid-transport
 
-
+### Login View
 <img src="images/instamilligram.PNG" >
 
-
+### Home View
 <img src="images/instamilligram1.jpg" >
 
-
+### Profile View
 <img src="images/instamilligram2.PNG" >

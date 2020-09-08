@@ -56,3 +56,32 @@ a {
 .material-icons:hover {
   cursor: pointer;
 }
+
+.footer
+{
+    color: #0c0c0c;
+    background: #FFF;
+    text-align: center;
+    font-family: "Space Mono", Arial, serif;  
+}
+
+.fa {
+    color: #0c0c0c;
+    padding: 7px;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  .fa:hover {
+    color: #91640F;
+    text-decoration-line: none;
+  }
+
+  
+.fa-github:hover {
+    text-decoration-line: none;
+} 

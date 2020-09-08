@@ -1,5 +1,6 @@
 import React,{useEffect,createContext,useReducer,useContext} from 'react';
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 import "./App.css"
 import {BrowserRouter,Route,Switch,useHistory} from 'react-router-dom'
 import Home from './components/Screens/Home'
@@ -13,6 +14,7 @@ import SubscribedUserPosts from './components/Screens/SubscribesUserPosts'
 import Reset from './components/Screens/Reset'
 import NewPassword from './components/Screens/Newpassword'
 export const UserContext = createContext()
+
 
 
 const Routing = ()=>{
@@ -68,6 +70,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routing />  
+      <Footer />
     </BrowserRouter>
     </UserContext.Provider>
   );

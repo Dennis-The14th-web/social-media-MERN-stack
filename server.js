@@ -5,7 +5,8 @@ const PORT = process.env.PORT || 5000
 const { MONGOLAB_TEAL_URI } = require('./config/keys')
 
 
-mongoose.connect( MONGOLAB_TEAL_URI ,{
+
+mongoose.connect(MONGOLAB_TEAL_URI || "mongodb://192.168.99.100/justKonnect",{
     useNewUrlParser:true,
     useUnifiedTopology: true
 

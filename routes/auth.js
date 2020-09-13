@@ -10,7 +10,6 @@ const requireLogin = require('../middleware/requireLogin')
 const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
 const {SENDGRID_API,EMAIL} = require('../config/keys')
-//
 
 
 const transporter = nodemailer.createTransport(sendgridTransport({
@@ -40,12 +39,15 @@ router.post('/signup',(req,res)=>{
     
             user.save()
             .then(user=>{
-                // transporter.sendMail({
-                //     to:user.email,
-                //     from:"no-reply@insta.com",
-                //     subject:"signup success",
-                //     html:"<h1>welcome to instagram</h1>"
-                // })
+                transporter.sendMail({
+                    to:user.email,
+                    from:"no-reply-instamilligram@representative.com",
+                    subject:"signup success",
+                    html:`
+                    <h1>Welcome to Instamilligram</h1>
+                    <p>Explore this site to connect with the world and interact with friends and family</P>
+                    `
+                })
                 res.json({message:"saved successfully"})
             })
             .catch(err=>{
@@ -105,7 +107,7 @@ router.post('/reset-password',(req,res)=>{
              user.save().then((result)=>{
                  transporter.sendMail({
                      to:user.email,
-                     from:"no-replay@insta.com",
+                     from:"no-reply-instamilligram@representative.com",
                      subject:"password reset",
                      html:`
                      <p>You requested for password reset</p>

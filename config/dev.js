@@ -11,6 +11,4 @@ module.exports={
 
 //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
 
-//MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHzagOJR0cTqNnjyQYoEWh2auuTZxy6koSsw+95pW/VqHXYh6u6Qvyvy6ETcAn/WMxnNx1YgUpcU+Qa8yhgfq5Q==
-
 // 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    Active

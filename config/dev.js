@@ -2,7 +2,7 @@ module.exports={
     MONGOLAB_TEAL_URI:"mongodb://realcoding:therealdeal1@ds151076.mlab.com:51076/heroku_dvjknbq9?authSource=heroku_dvjknbq9",
     JWT_SECRET:"eggdeliciousxnotokmcmuffin",
     SENDGRID_API:"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",
-    EMAIL:"http:localhost:3000"
+    EMAIL:"https://dennismernstackapp.herokuapp.com"
 }
 
 

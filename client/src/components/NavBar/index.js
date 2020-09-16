@@ -2,6 +2,7 @@ import React,{useContext,useRef,useEffect,useState} from 'react'
 import {Link ,useHistory} from 'react-router-dom'
 import {UserContext} from '../../App'
 import M from 'materialize-css'
+import $ from 'jquery'
 const NavBar = ()=>{
     const  searchModal = useRef(null)
     const [search,setSearch] = useState('')
@@ -13,14 +14,16 @@ const NavBar = ()=>{
      },[])
      const renderList = ()=>{
        if(state){
+        
            return [
-            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}>search</i></li>,
+            <ul id="dropdown1" className="dropdown-content">
+            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}>search</i></li>
             <li key="2"><Link to="/profile">Profile</Link></li>,
             <li key="3"><Link to="/create">Create Post</Link></li>,
             <li key="4"><Link to="/myfollowingpost">My following Posts</Link></li>,
             <li  key="5">
              <button className="btn #c62828 red darken-3"
-            onClick={()=>{
+              onClick={()=>{
               localStorage.clear()
               dispatch({type:"CLEAR"})
               history.push('/signin')
@@ -29,6 +32,7 @@ const NavBar = ()=>{
                 Logout
             </button>
             </li>
+            </ul>
          
             
            ]
@@ -63,7 +67,7 @@ const NavBar = ()=>{
           <Link to={state?"/":"/signin"} className="brand-logo left">Instamilligram</Link>
           <ul id="nav-mobile" className="right">
              {renderList()}
-  
+             <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
           </ul>
         </div>
         <div id="modal1" className="modal" ref={searchModal} style={{color:"black"}}>

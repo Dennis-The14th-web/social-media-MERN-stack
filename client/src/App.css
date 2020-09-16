@@ -85,3 +85,27 @@ a {
 .fa-github:hover {
     text-decoration-line: none;
 } 
+
+
+
+/* responsive media queries */
+
+@media only screen and (max-width: 600px) {
+  .nav-wrapper{
+    min-width: 100%;
+  }
+
+  #nav-link, #nav-link1, #nav-link2 {
+    font-size: 4px;
+    font-weight: bolder;
+    padding: inherit;
+  }
+
+ button, .btn {
+    width: 10px;
+    height: 20px;
+    font-size: 8px;
+    
+   
+  }
+}

@@ -4,7 +4,7 @@
 
 ### About app
 
-- Social media MERN-Stack is an Instagram-like app that functions from frontend to backend which allows users to signup a new account, log in, update profile, upload profile picture, create a post with image upload, search for users with their email address, follow other users, like, unlike, add and update comments. Get email notifications on signup and reset a password via Nodemailer-Sendgrid-transporter.
+- Social media MERN-Stack is an Instagram-like app that functions from frontend to backend which allows users to signup a new account, log in, update profile, upload profile picture, create a post with image upload, search for users with their email address, follow other users, like, unlike, add and update comments. Get direct inbox email notification on signup and reset a password via Nodemailer-Sendgrid-transporter.
 
 
 ### Technolgies

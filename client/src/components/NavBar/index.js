@@ -2,8 +2,13 @@ import React,{useContext,useRef,useEffect,useState} from 'react'
 import {Link ,useHistory} from 'react-router-dom'
 import {UserContext} from '../../App'
 import M from 'materialize-css'
-import $ from 'jquery'
+
 const NavBar = ()=>{
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+  });
     const  searchModal = useRef(null)
     const [search,setSearch] = useState('')
     const [userDetails,setUserDetails] = useState([])
@@ -12,12 +17,12 @@ const NavBar = ()=>{
      useEffect(()=>{
          M.Modal.init(searchModal.current)
      },[])
+    
      const renderList = ()=>{
        if(state){
         
            return [
-            <ul id="dropdown1" className="dropdown-content">
-            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}>search</i></li>
+            <li key="1"><i  data-target="modal1" className="large material-icons modal-trigger" style={{color:"black"}}>search</i></li>,
             <li key="2"><Link to="/profile">Profile</Link></li>,
             <li key="3"><Link to="/create">Create Post</Link></li>,
             <li key="4"><Link to="/myfollowingpost">My following Posts</Link></li>,
@@ -32,9 +37,7 @@ const NavBar = ()=>{
                 Logout
             </button>
             </li>
-            </ul>
-         
-            
+      
            ]
        }else{
          return [
@@ -64,10 +67,13 @@ const NavBar = ()=>{
     return(
         <nav>
         <div className="nav-wrapper white">
-          <Link to={state?"/":"/signin"} className="brand-logo left">Instamilligram</Link>
-          <ul id="nav-mobile" className="right">
-             {renderList()}
-             <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
+        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+          <Link to={state?"/":"/signin"} className="brand-logo center">Instamilligram</Link>
+          <ul className="right hide-on-med-and-down">
+             {renderList()}  
+          </ul>
+          <ul className="sidenav" id="mobile-demo">
+            {renderList()}
           </ul>
         </div>
         <div id="modal1" className="modal" ref={searchModal} style={{color:"black"}}>
